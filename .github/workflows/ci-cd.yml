@@ -56,7 +56,7 @@ jobs:
           PY
       - name: Publicar resultados como artefacto
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: resultados-pruebas
           path: TestResults
