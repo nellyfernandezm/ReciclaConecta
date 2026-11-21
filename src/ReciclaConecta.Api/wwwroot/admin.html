@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel admin · ReciclaConecta</title>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="/index.html"><span class="logo">♻</span>ReciclaConecta</a>
+  <nav id="nav"></nav>
+</header>
+<main>
+<h1>Panel de administración</h1>
+<p class="sub">Indicadores de impacto, verificación de recolectores y puntos de acopio.</p>
+<div class="kpis" id="kpis"></div>
+<div class="grid-2">
+  <section class="panel"><h2>Kg reciclados por material</h2><div id="porMaterial"></div></section>
+  <section class="panel"><h2>Solicitudes por estado</h2><div id="porEstado"></div></section>
+</div>
+<section class="panel separado">
+  <h2>Usuarios</h2>
+  <div id="msgUsuarios"></div>
+  <div class="tabla-wrap"><table><thead><tr><th>Nombre</th><th>Correo</th><th>Rol</th><th>Distrito</th><th>Estado</th><th>Acciones</th></tr></thead><tbody id="usuarios"></tbody></table></div>
+</section>
+<section class="panel separado">
+  <h2>Puntos de acopio</h2>
+  <div id="msgPuntos"></div>
+  <form id="formPunto" novalidate>
+    <input type="hidden" id="puntoId">
+    <div class="grid-3">
+      <div class="campo"><label for="pNombre">Nombre</label><input id="pNombre" maxlength="120"></div>
+      <div class="campo"><label for="pDireccion">Dirección</label><input id="pDireccion" maxlength="200"></div>
+      <div class="campo"><label for="pDistrito">Distrito</label><input id="pDistrito" maxlength="60"></div>
+      <div class="campo"><label for="pLat">Latitud</label><input id="pLat" type="number" step="0.0001"></div>
+      <div class="campo"><label for="pLng">Longitud</label><input id="pLng" type="number" step="0.0001"></div>
+      <div class="campo"><label for="pIni">Horario Lun–Sáb (inicio / fin)</label><div class="grid-2"><input id="pIni" type="time" value="08:00"><input id="pFin" type="time" value="18:00" aria-label="Hora de fin"></div></div>
+    </div>
+    <label>Materiales que recibe</label>
+    <div class="chips" id="pMateriales"></div>
+    <div class="acciones"><button class="btn" type="submit" id="btnPunto">Agregar punto</button><button class="btn sec" type="button" id="btnLimpiar">Limpiar</button></div>
+  </form>
+  <div class="tabla-wrap separado"><table><thead><tr><th>Nombre</th><th>Distrito</th><th>Materiales</th><th>Horario</th><th>Acciones</th></tr></thead><tbody id="puntos"></tbody></table></div>
+</section>
+</main>
+<footer>ReciclaConecta · Conectamos a quienes reciclan con puntos de acopio y recolectores</footer>
+<script src="/js/comun.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

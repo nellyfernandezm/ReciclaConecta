@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis recojos · ReciclaConecta</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="/index.html"><span class="logo">♻</span>ReciclaConecta</a>
+  <nav id="nav"></nav>
+</header>
+<main>
+<h1>Mis recojos</h1>
+<p class="sub">Publica lo que tienes para reciclar y un recolector cercano pasará a recogerlo.</p>
+<div class="kpis" id="impacto"></div>
+<div class="grid-2">
+  <section class="panel">
+    <h2>Solicitar recojo</h2>
+    <div id="msg"></div>
+    <form id="form" novalidate>
+      <div class="grid-2">
+        <div class="campo"><label for="material">Material</label><select id="material"></select></div>
+        <div class="campo"><label for="kg">Cantidad estimada (kg)</label><input id="kg" type="number" min="0.5" max="1000" step="0.5" value="5"></div>
+      </div>
+      <div class="campo"><label for="direccion">Dirección</label><input id="direccion" maxlength="200" required></div>
+      <div class="grid-2">
+        <div class="campo"><label for="distrito">Distrito</label><input id="distrito" maxlength="60" required></div>
+        <div class="campo"><label for="referencia">Referencia</label><input id="referencia" maxlength="200"></div>
+      </div>
+      <label>Ubicación (haz clic en el mapa)</label>
+      <div id="mapa" class="mapa mapa-chico"></div>
+      <p class="sub" id="coords"></p>
+      <button class="btn" type="submit">Publicar solicitud</button>
+    </form>
+  </section>
+  <section class="panel">
+    <h2>Mis solicitudes</h2>
+    <div id="lista" class="lista"></div>
+  </section>
+</div>
+</main>
+<footer>ReciclaConecta · Conectamos a quienes reciclan con puntos de acopio y recolectores</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="/js/comun.js"></script>
+<script src="/js/ciudadano.js"></script>
+</body>
+</html>
