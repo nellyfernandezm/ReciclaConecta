@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crear cuenta · ReciclaConecta</title>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header class="cabecera">
+  <a class="marca" href="/index.html"><span class="logo">♻</span>ReciclaConecta</a>
+  <nav id="nav"></nav>
+</header>
+<main>
+<div class="centrado panel">
+  <h1>Crear cuenta</h1>
+  <div id="msg"></div>
+  <form id="form" novalidate>
+    <div class="campo"><label for="rol">Quiero…</label>
+      <select id="rol"><option value="Ciudadano">Entregar mis reciclables (ciudadano / negocio)</option>
+      <option value="Recolector">Recoger reciclables (recolector)</option></select></div>
+    <div class="campo"><label for="nombre">Nombre</label><input id="nombre" maxlength="100" required></div>
+    <div class="campo"><label for="email">Correo</label><input id="email" type="email" maxlength="150" autocomplete="username" required></div>
+    <div class="campo"><label for="password">Contraseña (mín. 8, letras y números)</label><input id="password" type="password" autocomplete="new-password" required></div>
+    <div class="campo"><label for="distrito">Distrito</label><input id="distrito" maxlength="60"></div>
+    <button class="btn" type="submit">Crear cuenta</button>
+  </form>
+  <p class="sub" id="notaRecolector" hidden>Los recolectores pueden aceptar recojos cuando el administrador verifica su cuenta.</p>
+</div>
+</main>
+<footer>ReciclaConecta · Conectamos a quienes reciclan con puntos de acopio y recolectores</footer>
+<script src="/js/comun.js"></script>
+<script src="/js/registro.js"></script>
+</body>
+</html>
