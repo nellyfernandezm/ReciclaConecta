@@ -7,7 +7,7 @@ COPY src/ src/
 RUN dotnet publish src/ReciclaConecta.Api/ReciclaConecta.Api.csproj -c Release -o /app --no-restore
 
 # Etapa 2: imagen final solo con el runtime (más pequeña y con menos superficie de ataque)
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:11.0 AS final
 WORKDIR /app
 COPY --from=build /app .
 # Carpeta de la base SQLite con permisos para el usuario sin privilegios
