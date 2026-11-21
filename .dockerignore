@@ -1,0 +1,10 @@
+**/bin
+**/obj
+src/ReciclaConecta.Api/db
+**/*.db
+**/TestResults
+.git
+.github
+.vs
+tests
+*.md
