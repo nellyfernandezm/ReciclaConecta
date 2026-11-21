@@ -1,5 +1,5 @@
 # Etapa 1: compilar y publicar con el SDK
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:11.0 AS build
 WORKDIR /src
 COPY src/ReciclaConecta.Api/ReciclaConecta.Api.csproj src/ReciclaConecta.Api/
 RUN dotnet restore src/ReciclaConecta.Api/ReciclaConecta.Api.csproj
